@@ -1,0 +1,60 @@
+html{
+    display: block;
+    background-color: #FCF8EE;
+    font-size: 16px;
+    height: 100vh;
+    margin: 20px 20px;
+}
+
+/* border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. */
+* {
+    box-sizing: border-box;
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul>li {
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px 15px;
+    background-color: palevioletred;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+.headline {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headline article {
+    margin-top: -10px;
+}
+
+.headline h1 {
+    font-size: 5em;
+}
+
+.headline p {
+    font-size: 2em;
+    text-align: center;
+}
+
+
+
+
+
