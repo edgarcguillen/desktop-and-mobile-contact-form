@@ -1,14 +1,23 @@
 html{
-    display: block;
+    /* display: block; */
     background-color: #FCF8EE;
     font-size: 16px;
     height: 100vh;
     margin: 20px 20px;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. */
+ /* selecting all elements on the page, along with the ::before
+     and ::after pseudo-elements; resetting their margin and
+     padding to zero and forcing all elements to calculate their
+     box-sizing the same way, 'border-box' includes the border-widths,
+     and padding, in the stated width: */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .site {
@@ -23,6 +32,13 @@ html{
     justify-content: space-between;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 3em;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
 ul>li {
     list-style: none;
     display: inline;
@@ -35,24 +51,95 @@ ul>li {
     font-size: 1.15em;
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
 .headline {
     display:flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+    max-width: 950px;
 }
 
 .headline article {
-    margin-top: -10px;
+    margin-top: 10px;
 }
 
 .headline h1 {
     font-size: 5em;
+    margin-bottom: 0px;
 }
 
 .headline p {
-    font-size: 2em;
-    text-align: center;
+    font-size: 1.45em;
+    margin-top: 0px;
 }
+
+.form {
+    background-color: #F6E7A2;
+    border: 2px dashed black;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8em;
+    padding: 40px;
+    text-align: left;
+    margin-block-start: auto;
+}
+
+.form fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+fieldset label {
+    font-size: 1.45em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+fieldset span {
+    font-size: .65em;
+    background-color: tomato;
+    padding: 1px 8px;
+    border: 1px dotted black;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+fieldset p {
+    margin: 0 0 10px 0;
+}
+
+#contact_reason, #contact_file, #contact_email {
+    font-size: 1.15em;
+}
+
+#contact_reason, #contact_details, #contact_email {
+    border: 2px solid black;
+    padding: 5px 10px;
+}
+
+.form button {
+    background-color: palevioletred;
+    border: 2px solid black;
+    border-radius: 40px;
+    color: whitesmoke;
+    display: flex;
+    align-self: flex-start;
+    padding: 3px 8px;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+
+
 
 
 

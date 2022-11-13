@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@300;400;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,10 +18,10 @@
                  (2) <nav> >>> with one <ul> + two <li>   
             -->
     <div class="site">
-
         <header class="header">
             <div class="logo">
                 <img src="resources/images/3105773.png" alt="">
+                <p><strong>Cream Pop</strong></p>
             </div>
             <nav class="nav">
                 <ul>
@@ -36,49 +39,54 @@
         <main class="main">
             <div class="headline">
                 <header>
-                    <h1>You matter as much as our ice cream</h1>
+                    <h1>What's poppin'?</h1>
                 </header>
                 <article class="article">
                     <p>For additional questions about our application process, current customers who need a little help,
                         or anything else, fill out the out form below and we'll get back to you in about 3 hours. We're
                         busy making a few popsicles at the moment.</p>
                     <p>In the meantime, feel free to check out our <a href="#">Tutorials</a>, <a href="#">FAQs</a>, and
-                        <a href="#">Guides</a></p>.
+                        <a href="#">Guides</a>
+                    </p>.
                 </article>
             </div>
+            <div class="form-container">
+                <form class="form" method="post" action="">
+                    <fieldset class="contact-reason">
+                        <label for="contact_reason">How can we help you? <span>Required</span></label>
+                        <select name="contact-reason" id="contact_reason" required>
+                            <option value>Please pick one...</option>
+                            <option value="login">I can't log into my account</option>
+                            <option value="billing">I have a billing question</option>
+                            <option value="confused">Need help setting up my ice cream maker</option>
+                            <option value="order">Something is wrong with my order</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="contact-details">
+                        <label for="contact_details">What's the scoop? <span>Required</span></label>
+                        <p>It's a lot like ice cream. The more, the better. Share all the details about your question,
+                            comment, or issue.</p>
+                        <textarea name="contact-details" id="contact_details" cols="50" rows="10"
+                            spellcheck="false"></textarea>
+                    </fieldset>
+                    <fieldset class="contact-file">
+                        <label for="contact_file">Send us a file, screenshot, or document</label>
+                        <p>Hold down your shift key to pick multiple files.</p>
+                        <input type="file" name="contact-file" id="contact_file" multiple>
+                    </fieldset>
+                    <fieldset class="contact-email">
+                        <label for="contact_email">What's your email address? <span>Required</span></label>
+                        <input type="email" name="contact-email" id="contact_email" placeholder="Your email address">
+                    </fieldset>
+                    <button class="form-button" type="submit">
+                        <p>Send request</p> 
+                    </button>
+                </form>
+            </div>
 
-            <form method="post" action="">
-                <fieldset class="contact-reason">
-                    <label for="contact_reason">How can we help you? <span>Required</span></label>
-                    <select name="contact-reason" id="contact_reason" required>
-                        <option value>Please pick one...</option>
-                        <option value="login">I can't log into my account</option>
-                        <option value="billing">I have a billing question</option>
-                        <option value="confused">Need help setting up my ice cream maker</option>
-                        <option value="order">Something is wrong with my order</option>
-                        <option value="other">Other</option>
-                    </select>
-                </fieldset>
-                <fieldset class="contact-details">
-                    <label for="contact_details">What's the scoop? <span>Required</span></label>
-                    <p>It's a lot like ice cream. The more, the better. Share all the details about your question,
-                        comment, or issue.</p>
-                    <textarea name="contact-details" id="contact_details" cols="50" rows="10"
-                        spellcheck="false"></textarea>
-                </fieldset>
-                <fieldset class="contact-file">
-                    <label for="contact_file">Send us a file, screenshot, or document</label>
-                    <input type="file" name="contact-file" id="contact_file" multiple>
-                </fieldset>
-                <fieldset class="contact-email">
-                    <label for="contact_email">What's your email address? <span>Required</span></label>
-                    <input type="email" name="contact-email" id="contact_email">
-                </fieldset>
-                <button class="form-button" type="submit">
-                    <p>Send request</p>
-                </button>
-            </form>
         </main>
+        <footer>Footer content</footer>
     </div>
 
 </body>
