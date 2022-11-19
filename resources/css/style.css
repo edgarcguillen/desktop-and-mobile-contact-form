@@ -3,8 +3,6 @@ html{
     background-color: #FCF8EE;
     font-size: 16px;
     height: 100vh;
-    margin: 20px 20px;
-    font-family: 'Mochiy Pop One', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -20,35 +18,84 @@ html{
     padding: 0;
 }
 
+
 .site {
     display: flex;
     flex-direction: column;
 }
 
-.header {
+/* Navigation CSS */
+.top-header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 10px;
+    box-shadow: 0px 2px 0px rgb(255, 235, 205);
 }
 
-.logo {
+.navbar {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    font-size: 3em;
-    font-family: 'Mountains of Christmas', cursive;
+    justify-content: space-between;
+    min-height: 70px;
+    padding: 0 24px;
+    flex-grow: 1;
 }
 
-ul>li {
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+.nav-item {
     list-style: none;
-    display: inline;
-    margin-right: 20px;
     border: 2px solid black;
+    width: 100px;
     border-radius: 20px;
     padding: 10px 15px;
-    background-color: palevioletred;
-    font-weight: bold;
-    font-size: 1.15em;
+    background-color: palevioletred;    
+    transition: 0.7s ease;
+}
+
+.nav-item:hover {
+    background-color: rgba(216, 112, 147, 0.425);
+    color: black;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.nav-branding {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.nav-branding img {
+    max-height: 70px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    /* -webkit-transition: all 0.3s ease-in-out; */
+    /* transition: all 0.3s ease-in-out; */
+    background-color: black;
 }
 
 .main {
@@ -77,6 +124,7 @@ ul>li {
 .headline p {
     font-size: 1.45em;
     margin-top: 0px;
+    margin-bottom: 8px;
 }
 
 .form {
@@ -89,6 +137,7 @@ ul>li {
     padding: 40px;
     text-align: left;
     margin-block-start: auto;
+    margin-top: 10px;
 }
 
 .form fieldset {
@@ -133,15 +182,49 @@ fieldset p {
     color: whitesmoke;
     display: flex;
     align-self: flex-start;
-    padding: 3px 8px;
+    padding: 5px 10px;
     font-weight: bold;
     font-size: 1.15em;
 }
 
+footer {
+    margin-top: 40px;
+}
 
+@media(max-width: 768px){
+    .hamburger {
+        display: block;
+    }
+    
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
 
+    .hamburger.active .bar:nth-child(1){
+        transform:translateY(8px) rotate(45deg);
+    }
 
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
 
+    .nav-menu{
+        position: fixed;
+        left: -100%; 
+        top: 90px;
+        height: 100vh;
+        padding-top: 50px;
+        gap: 2;
+        background-color: rgb(255, 235, 205);
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        justify-content: start;
+    }
 
+    .nav-menu.active {
+        Left: 0;
+    }
 
-
+}
