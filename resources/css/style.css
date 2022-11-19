@@ -228,3 +228,10 @@ footer {
     }
 
 }
+
+@media(max-width: 668px){
+    h1 {
+        line-height: 1.15em;
+        padding-bottom: 15px;
+    }
+}
